@@ -1,0 +1,22 @@
+<h1>Tarea CRUD</h1>
+<p>Productos en venta</p>
+<button onclick = "window.location.href = './products/create'">Agregar Producto</button>
+<p>Lista de productos: </p>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Edit</th>
+        <th>Delete</th>   
+    </tr>
+    {{#each products}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{name}}</td>
+        <td>{{price}}</td>
+        <td><button onclick = "window.location.href = './products/{{id}}/edit'">Edit</button></td>
+        <td><button onclick = "window.location.href = './products/{{id}}'">Delete</button></td>
+    </tr>  
+    {{/each}}
+</table>
